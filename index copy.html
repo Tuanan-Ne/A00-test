@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- Khúc đầu -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">A00 store®</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Tất cả sản phẩm</a></li>
+                            <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                            <li><a class="dropdown-item" href="#">Quần Jean</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hàng Mới <span class="badge bg-danger">New</span></a>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Hàng Bán Chạy</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+
+                <div class="d-flex gap-3 fs-5">
+                    <a href="#" class="text-dark"><i class="bi bi-search"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-person"></i></a>
+                    <a href="cart.html" class="text-dark"><i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner chuyển -->
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/bn1.png" alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="img/bn2.jpg" alt="Chicago" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="img/bn3.png" alt="New York" class="d-block" style="width:100%">
+            </div>
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- dưới banner chuyển -->
+
+    <div class="container my-4">
+        <div class="row justify-content-center align-items-center g-3">
+
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <img src="img/mh.jpg" style="width: 60px; height: 60px;" alt="">
+                    <span>Miễn phí vận chuyển</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <img src="img/dh.webp" style="width: 60px; height: 60px; " alt="">
+                    <span>Đổi hàng tận nhà</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <img src="img/tt.png" style="width: 60px; height: 60px; " alt="">
+                    <span>Thanh toán COD</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <img src="img/dt.png" style="width: 60px; height: 60px; " alt="">
+                    <span>Hotline: 028.73066.060</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- đổ dữ liệu -->
+
+    <div class="container">
+        <div class="row">
+            <h1>Sản phẩm khuyến mãi</h1>
+        </div>
+        <div class="row" id="sell">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Sản phẩm bán chạy</h1>
+        </div>
+        <div class="row" id="best-selling">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>Sản phẩm hot</h1>
+        </div>
+        <div class="row" id="product-hot">
+        </div>
+    </div>
+
+    <!-- JavaScript dữ liệu -->
+
+    <script src="js/products.js"></script>
+    <script>
+        function renderList(special, elementId) {
+            const list = products.filter(p => p.special == special);
+            const box = document.getElementById(elementId);
+
+            for (let i = 0; i < list.length; i++) {
+                box.innerHTML +=
+                    `<div class="col-6 col-md-3 mb-4">
+                    <div class="product p-2">
+                        <img src="img/${list[i].img}" alt="${list[i].name}">
+                        <h3>${list[i].name}</h3>
+                        <p>${list[i].describe}</p>
+                        <h4>${list[i].price.toLocaleString("vi-VN")}đ</h4>
+                        <button type="button" class="btn btn-dark">Mua ngay</button>
+                        <button type="button" class="btn btn-outline-dark" onclick="detail(${list[i].id})">Chi tiết</button>
+                    </div>
+                </div>`;
+            }
+        }
+
+        renderList("sell", "sell");
+        renderList("best-selling", "best-selling");
+        renderList("product-hot", "product-hot");
+
+        function detail(i) {
+            window.location.href = `detail.html?id=${i}`;
+        }
+    </script>
+
+    <!-- kết trang-->
+
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h4 class="fw-bold text-uppercase">A00 Store®</h4>
+                    <p class="text-secondary">
+                        Phong cách trẻ trung, năng động.
+                        Tự tin thể hiện cá tính của bạn.
+                    </p>
+
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="text-white">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3">
+                    <h5 class="fw-bold">Danh mục sản phẩm</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Áo nam
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Áo nữ
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Giày thể thao
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Phụ kiện
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3">
+                    <h5 class="fw-bold">Hỗ trợ khách hàng</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Hướng dẫn mua hàng
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Chính sách đổi trả
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Chính sách vận chuyển
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Câu hỏi thường gặp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-bold">Thông tin liên hệ</h5>
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        0123 456 789
+                    </p>
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        support@nikestore.vn
+                    </p>
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-geo-alt me-2"></i>
+                        TP. Hồ Chí Minh, Việt Nam
+                    </p>
+
+                    <h6 class="fw-bold mt-3">Thanh toán</h6>
+                    <div class="d-flex gap-3 fs-3">
+                        <i class="bi bi-credit-card"></i>
+                        <i class="bi bi-cash-coin"></i>
+                        <i class="bi bi-wallet2"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary mt-4">
+
+            <div class="text-center text-secondary small">
+                <p class="mb-1">
+                    © 2026 A00 Store®. All rights reserved.
+                </p>
+                <p class="mb-0">
+                    Chính sách bảo mật | Điều khoản sử dụng
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
